@@ -23,7 +23,7 @@ find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.p
 		read answer </dev/tty
 		if [ "${answer}" == "y" ]; then
 			echo "-> Updating $f"
-			default write "$f" DVTPlugInCompatibilityUUIDs -array-add $XCODE_UUID
+			defaults write "$f" DVTPlugInCompatibilityUUIDs -array-add $XCODE_UUID
 		else
 			echo "-> Skipping $f"
 		fi
